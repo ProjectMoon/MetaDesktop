@@ -1,0 +1,27 @@
+<html>
+<head>
+<link rel="stylesheet" href="theme.css" media="screen" />
+<script language="javascript" type="text/javascript" src="draggable.js"></script>
+<script language="javascript" type="text/javascript" src="MetaWindow.js"></script>
+<script language="javascript" type="text/javascript" src="TaskBar.js"></script>
+<script language="javascript" type="text/javascript" src="WindowManager.js"></script>
+</head>
+<body>
+
+<div id="windows"></div>
+<div id="taskbar"></div>
+<script language="javascript" type="text/javascript">
+function wat(e) {
+	alert(e.x() + "," + e.y());
+}
+bar = new TaskBar();
+mc = new MetaWindow("MetaConsole", 100, 300, 500, 400);
+bar.AddEntry(mc);
+SmartMessenger = new MetaWindow("SmartMessenger", 20, 50, 200, 400);
+mc.ContentPane.innerHTML = "[jh44695 / ]$ ls /smart<br>cleaning<br>db<br>deals<br>schedules<br>users";
+SmartMessenger.ContentPane.innerHTML = "<b>Contacts</b>:<br><a href='#'>Jeff</a><br><a href='#'>Tyler</a><br><a href='#'>Them other people</a>";
+bar.AddEntry(SmartMessenger);
+mc.FocusWindow();
+</script>
+</body>
+</html>
